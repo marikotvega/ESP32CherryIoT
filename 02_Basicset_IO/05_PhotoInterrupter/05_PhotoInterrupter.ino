@@ -7,10 +7,10 @@ void setup(){
 
 void loop(){
   //Look at the serial monitor
-  if (digitalRead(ruptPin)==LOW) {
-    Serial.println("Interrupt!");
+  if (digitalRead(ruptPin)==HIGH) {
+    Serial.println("None!");
   } else {
-    Serial.println("...");
+    Serial.println("Interrupt！...");
   }
   delay(500);
 }
