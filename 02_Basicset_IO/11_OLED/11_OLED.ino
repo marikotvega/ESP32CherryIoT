@@ -28,7 +28,8 @@ void setup()
   display.setCursor(60, 45);
   display.print(F("CherryIoT"));
 
-  display.display();
+//  display.display();
+  display.startscrolldiagleft(1, 2);
 }
 
 void loop()
