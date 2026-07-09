@@ -7,7 +7,7 @@
 
 #define swPin 3 //3:ConnectorA 4:ConnectorB
 
-BleKeyboard bleKeyboard("ESP32 Keyboard"); // Can be renamed to any device name you like.
+BleKeyboard bleKeyboard("ESP32 My Keyboard"); // Can be renamed to any device name you like.
 
 void setup() {
   bleKeyboard.begin();
