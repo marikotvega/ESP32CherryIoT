@@ -1,6 +1,6 @@
 const int ledPin = 3; //3:ConnectorA 4:ConnectorB
 byte val;
-
+//raspberrypie
 void setup(){
   // Serial Setting
   Serial.begin(115200);
