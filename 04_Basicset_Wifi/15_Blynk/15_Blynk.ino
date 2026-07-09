@@ -1,15 +1,19 @@
 #define BLYNK_PRINT Serial
 
-#define BLYNK_TEMPLATE_ID "xxxxxx"
-#define BLYNK_TEMPLATE_NAME "xxxxxx"
-#define BLYNK_AUTH_TOKEN "xxxxxx"
+//#define BLYNK_TEMPLATE_ID "xxxxxx"
+//#define BLYNK_TEMPLATE_NAME "xxxxxx"
+//#define BLYNK_AUTH_TOKEN "xxxxxx"
+
+#define BLYNK_TEMPLATE_ID "XXXX"
+#define BLYNK_TEMPLATE_NAME "ESP32CherryIoT"
+#define BLYNK_AUTH_TOKEN "XXXX"
 
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <BlynkSimpleEsp32.h>
 
-char ssid[] = "xxxxx";
-char pass[] = "xxxxx";
+char ssid[] = "XXXX";
+char pass[] = "XXXX";
 
 const int ledPin = 3; //3:ConnectorA 4:ConnectorB 10:Builtin
 
