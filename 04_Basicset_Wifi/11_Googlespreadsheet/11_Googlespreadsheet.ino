@@ -4,8 +4,8 @@
 #include <WiFiClientSecure.h>
 
 // WiFi Setting
-const char* ssid = "xxxxx";
-const char* password = "xxxxx";
+const char* ssid = "XXXXXX";
+const char* password = "XXXXXX";
 
 void setup() {
   Serial.begin(115200);
@@ -41,7 +41,8 @@ void sendData(){
   WiFiClientSecure sslclient;
 
   const char* server = "script.google.com";
-  String url = "https://script.google.com/macros/s/AKfycbwatdrSt50TSvsoO5S1-7qFu4zQAKA1sp6lAMMN4QQiJ4WWjKFUgz1TY-5Fmi3BNBpd/exec";  //googlescript web appのurlを入力
+//  String url = "https://script.google.com/macros/s/AKfycbwatdrSt50TSvsoO5S1-7qFu4zQAKA1sp6lAMMN4QQiJ4WWjKFUgz1TY-5Fmi3BNBpd/exec";  //googlescript web appのurlを入力
+    String url = "https://script.google.com/macros/s/AKfycbyDT1GE-lTbSD6SHS2RpRMjuESWhjq4zlrsFSyV1Aa71P5bOEelzMWOUHFMGrb1Qv4G/exec";
 
   //Prepare measurements
   float sensor_data1= 11.11; //dammy data
@@ -64,6 +65,8 @@ void sendData(){
   url += sensor_data2;
   url += "&3_cell=";
   url += sensor_data3;
+
+  Serial.println(url);
 
   // Access server
   Serial.println("Access server...");
