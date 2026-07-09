@@ -2,8 +2,8 @@
 
 const int litsnsrPin = 3; //3:ConnectorA 4:ConnectorB
 
-const char *ssid="ESP32-WiFi-1";
-const char *pass="esp32wifi";
+const char *ssid="ZZZZXXXXXXXX";
+const char *pass="ZZZZXXXXXXXX";
 static WiFiClient client;
 
 void setup() {
