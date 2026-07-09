@@ -4,7 +4,7 @@
 #include <BLE2902.h>
 #include <esp_task_wdt.h>
 
-const int ledPin = 13; // LEDの接続ピン
+const int ledPin = 3; // LEDの接続ピン
 
 bool bleOn = false;
 
@@ -40,7 +40,7 @@ void setup() {
   digitalWrite(ledPin, LOW); // 初期状態でLEDをOFF
 
   // Initialize the BLE device
-  BLEDevice::init("My BLE Device");
+  BLEDevice::init("My Device");
 
   // Create the BLE Server
   pServer = BLEDevice::createServer();
