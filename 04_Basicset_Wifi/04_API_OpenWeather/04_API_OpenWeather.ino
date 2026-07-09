@@ -2,12 +2,13 @@
 
 #include <WiFi.h>
 #include <HTTPClient.h>
+#include <WiFiClientSecure.h>
 
-const char* ssid = "xxxxx";
-const char* password =  "xxxxx";
+const char* ssid = "XXXXXXXX";
+const char* password =  "XXXXXXXX";
 
-const String endpoint = "http://api.openweathermap.org/data/2.5/weather?q=matsue,jp&APPID=";
-const String key = "xxxxxxxxxxxxxxxxx"; // Your API key
+const String endpoint = "https://api.openweathermap.org/data/2.5/weather?q=kofu,jp&APPID=";
+const String key = "XXXXXX"; // Your API key
 
 void setup() {
   Serial.begin(115200);
@@ -22,7 +23,10 @@ void setup() {
 }
 
 void loop() {
-  if ((WiFi.status() == WL_CONNECTED)) {
+  if ((WiFi.status() == WL_CONNECTED)) {    
+    WiFiClientSecure client;
+    client.setInsecure();
+
     HTTPClient http;
     http.begin(endpoint + key); //Specify URL
     int httpCode = http.GET(); //Send a GET request
