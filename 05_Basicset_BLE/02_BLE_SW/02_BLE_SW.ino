@@ -20,7 +20,7 @@ void setup() {
   pinMode(swPin, INPUT);
 
   // Initialize the BLE device
-  BLEDevice::init("My BLE Device");
+  BLEDevice::init("My Device");
 
   // Create the BLE Server
   pServer = BLEDevice::createServer();
