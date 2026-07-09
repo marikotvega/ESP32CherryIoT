@@ -3,11 +3,11 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
  
-#define line_ch_id "xxxxx"  // Channel ID
-#define line_ch_pw "xxxxx"  // Channel secret
+#define line_ch_id "AAAXXXXXXXXX"  // Channel ID
+#define line_ch_pw "AAAXXXXXXXXXXXXXXXXXXXXXX"  // Channel secret
 
-#define SSID "xxxxx"
-#define PASS "xxxxx"
+#define SSID "XXXXXXXX"
+#define PASS "XXXXXXXX"
 
 const char* originalImageUrl = "https://www.pakutaso.com/shared/img/thumb/KAZUHIRO171013120_TP_V.jpg";
 const char* previewImageUrl  = "https://www.pakutaso.com/shared/img/thumb/KAZUHIRO171013120_TP_V.jpg";
@@ -56,7 +56,7 @@ int message_to_line(String textMessage){
     String json = "{\"messages\":[";
     json += "{\"type\":\"text\",\"text\":\"" + textMessage + "\"}";
     // If you remove the comment, the image will be sent.
-    //json += ",{\"type\":\"image\",\"originalContentUrl\":\"" + String(originalImageUrl) + "\",\"previewImageUrl\":\"" + String(previewImageUrl) + "\"}";
+    json += ",{\"type\":\"image\",\"originalContentUrl\":\"" + String(originalImageUrl) + "\",\"previewImageUrl\":\"" + String(previewImageUrl) + "\"}";
     json += "]}";
 
     Serial.println(json);
@@ -79,6 +79,6 @@ void setup(){
 }
 
 void loop(){
-    message_to_line("[esp32] Test!");  // Free Message:200/Month
+    message_to_line("[esp32] Test!　私はまりこっと。");  // Free Message:200/Month
     delay(10*60*1000);  // 10 minutes
 }
