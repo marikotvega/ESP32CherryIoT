@@ -3,8 +3,8 @@
 #include<WiFi.h>
 const int ledPin = 3; //3:ConnectorA 4:ConnectorB
 
-const char *ssid="XXXXXXXX";
-const char *pass="XXXXXXXX";
+const char *ssid="AAAAXXXXXXXX";
+const char *pass="AAAAXXXXXXXX";
 
 const IPAddress ip(192,168,XX,XX);
 const IPAddress subnet(255,255,255,0);
